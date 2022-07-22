@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Project Specific
+.DS_Store
+Cargo.lock
+stats.json
+yarn.lock
+/target
+/pkg
+/wasm-pack.log
