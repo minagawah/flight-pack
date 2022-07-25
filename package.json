@@ -1,33 +1,53 @@
 {
   "name": "flight-pack",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Flight simulation using wasm-pack",
-  "main": "public/index.html",
+  "version": "0.0.1",
+  "private": false,
+  "description": "A demo app using wasm-pack-plugin, drawing flight information on Google Map.",
+  "main": "dist/index.html",
   "scripts": {
-    "clippy": "cd src && cargo fmt && cargo clippy",
-    "prettier": "prettier --write \"*.{js,md,json}\" \"js/*.js\" \"static/*.{css,html,js}\"",
-    "build": "rimraf dist pkg && webpack",
-    "dev": "webpack-dev-server",
+    "clippy": "cd src && cargo clippy",
+    "prettier": "prettier --write \"*.{js,md,json}\" \"js/*.{css,html,js}\"",
+    "build": "rimraf dist pkg && NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack serve",
     "test": "cargo test && wasm-pack test --headless --firefox"
   },
   "repository": "https://github.com/minagawah/flight-pack.git",
   "keywords": [
-    "Flight",
-    "wasm-pack"
+    "FlightAware API",
+    "wasm-pack-plugin",
+    "web-sys",
+    "wasm-bindgen"
   ],
-  "author": "Hiroki Minagawa <minagawa@tokyo800.jp>",
+  "author": "minagawah <minag@tokyo800.jp>",
   "license": "(Unlicense OR MIT)",
   "bugs": {
     "url": "https://github.com/minagawah/flight-pack/issues"
   },
   "devDependencies": {
-    "@wasm-tool/wasm-pack-plugin": "^1.1.0",
-    "copy-webpack-plugin": "^5.0.3",
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/runtime-corejs3": "^7.18.9",
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3.24.0",
+    "css-loader": "^6.7.1",
+    "dotenv-webpack": "^8.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
-    "rimraf": "^3.0.0",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.3",
-    "webpack-dev-server": "^3.7.1"
+    "rimraf": "^3.0.2",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.1.6",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.14.3"
   }
 }

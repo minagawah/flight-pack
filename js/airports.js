@@ -1,0 +1,42 @@
+export const TARGET_AIRPORTS = [
+  {
+    icao: 'RCTP',
+    iata: 'TPE',
+    name: 'Chiang Kai Shek International',
+    city: 'Taipei',
+    country: 'Taiwan',
+    coord: { lat: 25.08, lng: 121.232 },
+  },
+  {
+    icao: 'VHHH',
+    iata: 'HKG',
+    name: 'Hong Kong International',
+    city: 'Hong Kong',
+    country: 'Hong Kong',
+    coord: { lat: 22.309, lng: 113.914 },
+  },
+  {
+    icao: 'RPLL',
+    iata: 'MNL',
+    name: 'Ninoy Aquino International',
+    city: 'Manila',
+    country: 'Philippines',
+    coord: { lat: 14.509, lng: 121.019 },
+  },
+  {
+    icao: 'WSSS',
+    iata: 'SIN',
+    name: 'Singapore Changi',
+    city: 'Singapore',
+    country: 'Singapore',
+    coord: { lat: 1.356, lng: 103.987 },
+  },
+  {
+    icao: 'VVTS',
+    iata: 'SGN',
+    name: 'Tansonnhat International',
+    city: 'Ho Chi Minh City',
+    country: 'Viet Nam',
+    coord: { lat: 10.82, lng: 106.662 },
+  },
+];

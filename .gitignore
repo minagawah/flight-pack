@@ -105,9 +105,12 @@ dist
 
 # Project Specific
 .DS_Store
+deploy.sh
 Cargo.lock
 stats.json
 yarn.lock
 /target
 /pkg
 /wasm-pack.log
+.env.local
+.env.prod
