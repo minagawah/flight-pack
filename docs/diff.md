@@ -148,7 +148,6 @@ wasm-bindgen-futures = "0.3.22"
 + wasm-bindgen = { version = "0.2.82", features = ["serde-serialize"] }
 + wasm-bindgen-futures = "0.4.32"
 - wee_alloc = { version = "0.4.2", optional = true }
-+ wee_alloc = { version = "0.4.5", optional = true }
 
 + [dependencies.rand]
 + version = "0.7.3"
